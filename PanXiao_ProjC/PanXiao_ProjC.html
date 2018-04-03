@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>PanXiaoProjC</title>
+
+</head>
+
+<body onload="main()" onresize="resize()" style="margin:0px;padding:0px;width:100%;height:100%;">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+
+    </canvas>
+    <p>press "up", "down", "left", "right" key to move around. press "w", "s", "a", "d" key to change perspective. press "i", "j", "k", "l" key to change the light position</p>
+    <p>press space key to turn on/off the lamp, enter key to turn on/off the headlight. press "m" to change the material of the sphere</p>
+    <p style="display:inline">change between phong lighting and Blinn-Phong lighting, between phong shading and gouraud shading:
+
+        <button onclick="changeLighting()" style="display:inline">change lighting</button>
+        <button onclick="changeShading()" style="display:inline">change shading</button> :&nbsp;
+        <div id="lightMode" style="display:inline"> Blinn-Phong lighting
+        </div>&nbsp;&&nbsp;
+        <div id="shadeMode" style="display:inline"> phong shading
+        </div>
+
+    </p>
+    <p>
+        <div id="stretcher">
+            <p>light source: lampAmbiR, lampAmbiG, lampAmbiB, lampDiffR, lampDiffG, lampDiffB, lampSpecR, lampSpecG, lampSpecB</p>
+            <p style="display:inline">lampAmbiR:<input id="lampAmbiR" size="1" value="1.0" /> lampAmbiG:<input id="lampAmbiG" size="1" value="1.0" /> lampAmbiB:<input id="lampAmbiB" size="1" value="1.0" /> lampDiffR:
+                <input id="lampDiffR" size="1" value="1.0" /> lampDiffG:<input id="lampDiffG" size="1" value="1.0" /> lampDiffB:<input id="lampDiffB" size="1" value="1.0" /> lampSpecR:
+                <input id="lampSpecR" size="1" value="1.0" /> lampSpecG:<input id="lampSpecG" size="1" value="1.0" /> lampSpecB:<input id="lampSpecB" size="1" value="1.0" /> </p>
+            &nbsp;
+            <button type="button" id="submit" onclick="onSubmit()">Submit</button>
+        </div>
+    </p>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-mod.js"></script>
+    <script src="lights-JT.js"></script>
+    <script src="materials_Ayerdi.js"></script>
+    <script src="PanXiao_ProjC.js"></script>
+</body>
+
+</html>

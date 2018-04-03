@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>projectA</title>
+
+</head>
+<body onload="main()">
+    <h1>Instructions</h1>
+    <p>press the button to speed up/down the rotation</p>
+    <div id="buttonGroup">
+        <button type="button" class="buttons" id="increaseSpin" onclick="increaseSpin()">speed up</button>
+        <button type="button" class="buttons" id="decreaseSpin" onclick="decreaseSpin()">slow down</button>
+    </div>
+    <p>Stretch the length of the screw by typing a number.</p>
+    <p><div id="stretcher">
+        <p>Stretch Amount(0.1 - 5.0): </p>
+        <input id="usrStretch" />
+        <button type="button" id="submit" onclick="onSubmitStretch()">Submit</button>
+    </div></p>
+    <p>Use w,a,s,d to move the screw around the canvas.</p>
+    <p>Clicking on canvas will change the color of the dumbbell</p>
+    <p>Draging the mouse in canvas will change the position of the dumbbell</p>
+
+
+    <canvas id="webgl" width="700" height="700">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+	<script src="lib/webgl-utils.js"></script>
+	<script src="lib/webgl-debug.js"></script>
+	<script src="lib/cuon-utils.js"></script>
+	<script src="lib/cuon-matrix-mod.js"></script>
+	<script src="PanXiao_ProjA.js"></script>
+
+</body>
+</html>

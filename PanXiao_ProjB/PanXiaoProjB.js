@@ -486,12 +486,12 @@ function draw(gl, u_MvpMatrix, u_ModelMatrix, u_NormalMatrix, u_ColorMod, curren
     // Clear <canvas> color AND DEPTH buffer
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     gl.viewport(0, 0, canvas.width / 2, canvas.height);
-    viewMatrix.setLookAt(0, 0, 5, // eye position
-        0, 1, 4.9999999, // look-at point
-        0, 1, 0); // up vector
-    // viewMatrix.setLookAt(g_EyeX, g_EyeY, g_EyeZ, // eye position
-    //     g_LookAtX, g_LookAtY, g_LookAtZ, // look-at point
+    // viewMatrix.setLookAt(0, 0, 5, // eye position
+    //     0, 1, 4.9999999, // look-at point
     //     0, 0, 1); // up vector
+    viewMatrix.setLookAt(g_EyeX, g_EyeY, g_EyeZ, // eye position
+        g_LookAtX, g_LookAtY, g_LookAtZ, // look-at point
+        0, 0, 1); // up vector
     if (view) {
         modelMatrix.setTranslate(2.3, 0, 0.5);
         modelMatrix.scale(0.4, 0.4, 0.4);
@@ -520,12 +520,12 @@ function draw(gl, u_MvpMatrix, u_ModelMatrix, u_NormalMatrix, u_ColorMod, curren
 
 
     gl.viewport(canvas.width / 2, 0, canvas.width / 2, canvas.height);
-    projMatrix.setOrtho(-10, 0, // left,right;
-        -10, 0, // bottom, top;
+    projMatrix.setOrtho(0, 10, // left,right;
+        0, 10, // bottom, top;
         1, 100); // near, far; (always >=0)
     viewMatrix.setLookAt(0, 0, 5, // eye position
-        1, 1, 5, // look-at point
-        0, 1, 0);
+        1, 1, 0, // look-at point
+        0, 0, 1);
     // viewMatrix.setLookAt(g_EyeX, g_EyeY, g_EyeZ, // eye position
     //     g_LookAtX, g_LookAtY, g_LookAtZ, // look-at point
     //     0, 1, 0); // up vector

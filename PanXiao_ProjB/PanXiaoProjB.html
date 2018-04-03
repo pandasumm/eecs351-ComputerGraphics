@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PanXiaoProjB</title>
+
+  </head>
+
+  <body onload="main()" onresize="resize()" style="margin:0px;padding:0px;width:100%;height:100%;">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+
+    </canvas>
+    <p>press "up", "down", "left", "right" key to move around</p>
+    <p>press "w", "s", "a", "d" key to change perspective</p>
+    <p><div id="stretcher">
+        <p>6 frustum: left, right, bottom, up, near, far</p>
+        left:<input id="left" size="1" value="-2"/>
+        right:<input id="right" size="1" value="2"/>
+        bottom:<input id="bottom" size="1" value="-3"/>
+        up:<input id="top" size="1" value="3"/>
+        near:<input id="near" size="1" value="1"/>
+        far:<input id="far" size="1" value="100"/>
+        <button type="button" id="submit" onclick="onSubmit()">Submit</button>
+    </div></p>
+    <p><div id="View From End Segment">
+        <p>see the view from end segment:
+        <button type="button" id="submit" onclick="viewFromEnd()">ViewFromEndSegment</button></p>
+    </div></p>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-mod.js"></script>
+    <script src="PanXiaoProjB.js"></script>
+  </body>
+</html>
